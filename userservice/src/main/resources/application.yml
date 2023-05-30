@@ -14,4 +14,4 @@ spring:
         format_sql: true  application:    name: user-service   
 
 logPath: ${logPath}
-spring.application.name: user-service
+springAppName: user-service
