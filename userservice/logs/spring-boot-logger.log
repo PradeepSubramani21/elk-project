@@ -29,3 +29,12 @@
 2023-05-30 14:29:50,036 - msg: Request received : {"sessionId":"dfsdfs","firstname":"Pradeep","lastname":"Subramani","email":"pradeep.s@gmail.com","phone":"98545456561","country":"India"}
 2023-05-30 14:29:50,036 - msg: adduser():: User obj validation success
 2023-05-30 14:29:50,077 - msg: adduser():: User data saved
+2023-05-30 14:57:15,807 - msg: Application shutdown requested.
+2023-05-30 14:57:15,823 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-30 14:57:15,823 - msg: Stopping service [Tomcat]
+2023-05-30 14:57:15,824 - msg: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-30 14:57:15,834 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-30 14:57:15,837 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-30 14:57:15,839 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-30 14:57:15,840 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-30 14:57:15,846 - msg: HikariPool-1 - Shutdown completed.
