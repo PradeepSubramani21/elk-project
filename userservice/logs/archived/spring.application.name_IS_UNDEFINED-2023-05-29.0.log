@@ -1,0 +1,973 @@
+2023-05-29 22:34:20,676 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 26188 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:34:20,681 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:34:21,216 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:34:21,262 - msg: Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:34:21,824 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:34:21,832 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:34:21,833 - msg: Starting service [Tomcat]
+2023-05-29 22:34:21,833 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:34:21,930 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:34:21,930 - msg: Root WebApplicationContext: initialization completed in 1212 ms
+2023-05-29 22:34:22,094 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:34:22,138 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:34:22,283 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:34:22,375 - msg: HikariPool-1 - Starting...
+2023-05-29 22:34:22,506 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:34:22,520 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:34:23,038 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:34:23,047 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:34:23,357 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:34:23,668 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:34:23,690 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:34:23,699 - msg: Started UserserviceApplication in 3.501 seconds (JVM running for 4.262)
+2023-05-29 22:34:29,871 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:34:29,871 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:34:29,872 - msg: Completed initialization in 1 ms
+2023-05-29 22:34:29,976 - msg: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint] with root cause
+java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.ensureObj(UnsafeFieldAccessorImpl.java:58)
+	at java.base/jdk.internal.reflect.UnsafeObjectFieldAccessorImpl.get(UnsafeObjectFieldAccessorImpl.java:36)
+	at java.base/java.lang.reflect.Field.get(Field.java:419)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.writeField(ReflectiveTypeAdapterFactory.java:138)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at com.google.gson.Gson.toJson(Gson.java:638)
+	at com.elk.userservice.aspect.UserServiceAspect.before(UserServiceAspect.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+	at org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$a51fe862.getUser(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2023-05-29 22:35:28,762 - msg: Application shutdown requested.
+2023-05-29 22:35:28,777 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:35:28,777 - msg: Stopping service [Tomcat]
+2023-05-29 22:35:28,778 - msg: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-29 22:35:28,781 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:35:28,783 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:35:28,785 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:35:28,786 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-29 22:35:28,792 - msg: HikariPool-1 - Shutdown completed.
+2023-05-29 22:35:32,038 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 26012 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:35:32,042 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:35:32,575 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:35:32,619 - msg: Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:35:33,171 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:35:33,184 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:35:33,184 - msg: Starting service [Tomcat]
+2023-05-29 22:35:33,185 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:35:33,293 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:35:33,294 - msg: Root WebApplicationContext: initialization completed in 1211 ms
+2023-05-29 22:35:33,460 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:35:33,500 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:35:33,634 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:35:33,722 - msg: HikariPool-1 - Starting...
+2023-05-29 22:35:33,854 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:35:33,874 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:35:34,407 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:35:34,416 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:35:34,728 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:35:35,037 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:35:35,060 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:35:35,068 - msg: Started UserserviceApplication in 3.498 seconds (JVM running for 4.277)
+2023-05-29 22:36:06,051 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:36:06,051 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:36:06,052 - msg: Completed initialization in 0 ms
+2023-05-29 22:36:06,153 - msg: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150] with root cause
+java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.ensureObj(UnsafeFieldAccessorImpl.java:58)
+	at java.base/jdk.internal.reflect.UnsafeObjectFieldAccessorImpl.get(UnsafeObjectFieldAccessorImpl.java:36)
+	at java.base/java.lang.reflect.Field.get(Field.java:419)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.writeField(ReflectiveTypeAdapterFactory.java:138)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at com.google.gson.Gson.toJson(Gson.java:638)
+	at com.elk.userservice.aspect.UserServiceAspect.before(UserServiceAspect.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+	at org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150.getUser(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2023-05-29 22:36:29,971 - msg: Application shutdown requested.
+2023-05-29 22:36:29,986 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:36:29,986 - msg: Stopping service [Tomcat]
+2023-05-29 22:36:29,987 - msg: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-29 22:36:29,990 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:36:29,992 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:36:29,994 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:36:29,996 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-29 22:36:30,002 - msg: HikariPool-1 - Shutdown completed.
+2023-05-29 22:36:33,261 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 17420 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:36:33,265 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:36:33,822 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:36:33,867 - msg: Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:36:34,383 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:36:34,393 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:36:34,393 - msg: Starting service [Tomcat]
+2023-05-29 22:36:34,393 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:36:34,508 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:36:34,508 - msg: Root WebApplicationContext: initialization completed in 1198 ms
+2023-05-29 22:36:34,676 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:36:34,719 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:36:34,861 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:36:34,944 - msg: HikariPool-1 - Starting...
+2023-05-29 22:36:35,076 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:36:35,094 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:36:35,681 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:36:35,690 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:36:35,995 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:36:36,285 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:36:36,305 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:36:36,314 - msg: Started UserserviceApplication in 3.528 seconds (JVM running for 4.325)
+2023-05-29 22:37:08,648 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:37:08,648 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:37:08,649 - msg: Completed initialization in 1 ms
+2023-05-29 22:37:08,757 - msg: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150] with root cause
+java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.ensureObj(UnsafeFieldAccessorImpl.java:58)
+	at java.base/jdk.internal.reflect.UnsafeObjectFieldAccessorImpl.get(UnsafeObjectFieldAccessorImpl.java:36)
+	at java.base/java.lang.reflect.Field.get(Field.java:419)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.writeField(ReflectiveTypeAdapterFactory.java:138)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at com.google.gson.Gson.toJson(Gson.java:638)
+	at com.elk.userservice.aspect.UserServiceAspect.before(UserServiceAspect.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+	at org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150.getUser(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2023-05-29 22:40:25,080 - msg: Application shutdown requested.
+2023-05-29 22:40:25,097 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:40:25,097 - msg: Stopping service [Tomcat]
+2023-05-29 22:40:25,098 - msg: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-29 22:40:25,100 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:40:25,103 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:40:25,105 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:40:25,106 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-29 22:40:25,113 - msg: HikariPool-1 - Shutdown completed.
+2023-05-29 22:41:10,786 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 14940 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:41:10,790 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:41:11,315 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:41:11,360 - msg: Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:41:11,906 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:41:11,915 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:41:11,916 - msg: Starting service [Tomcat]
+2023-05-29 22:41:11,916 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:41:12,017 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:41:12,017 - msg: Root WebApplicationContext: initialization completed in 1183 ms
+2023-05-29 22:41:12,183 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:41:12,225 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:41:12,365 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:41:12,454 - msg: HikariPool-1 - Starting...
+2023-05-29 22:41:12,591 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:41:12,607 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:41:13,134 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:41:13,143 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:41:13,448 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:41:13,744 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:41:13,765 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:41:13,774 - msg: Started UserserviceApplication in 3.477 seconds (JVM running for 4.255)
+2023-05-29 22:41:58,346 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:41:58,346 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:41:58,347 - msg: Completed initialization in 1 ms
+2023-05-29 22:41:58,436 - msg: test com.elk.userservice.controller.UserController@1be427b4
+2023-05-29 22:41:58,445 - msg: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150] with root cause
+java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.ensureObj(UnsafeFieldAccessorImpl.java:58)
+	at java.base/jdk.internal.reflect.UnsafeObjectFieldAccessorImpl.get(UnsafeObjectFieldAccessorImpl.java:36)
+	at java.base/java.lang.reflect.Field.get(Field.java:419)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.writeField(ReflectiveTypeAdapterFactory.java:138)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at com.google.gson.Gson.toJson(Gson.java:638)
+	at com.elk.userservice.aspect.UserServiceAspect.before(UserServiceAspect.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+	at org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150.getUser(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2023-05-29 22:42:31,721 - msg: Application shutdown requested.
+2023-05-29 22:42:31,741 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:42:31,741 - msg: Stopping service [Tomcat]
+2023-05-29 22:42:31,742 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:42:32,834 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:42:33,926 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:42:34,034 - msg: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-29 22:42:34,037 - msg: The web application [ROOT] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ app//com.elk.userservice.aspect.UserServiceAspect.before(UserServiceAspect.java:26)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+ java.base@16.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@16.0.2/java.lang.reflect.Method.invoke(Method.java:567)
+ app//org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+ app//org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+ app//org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+ app//org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+ app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ app//org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+ app//org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+ app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ app//org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+ app//org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+ app//com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150.getUser(<generated>)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+ java.base@16.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@16.0.2/java.lang.reflect.Method.invoke(Method.java:567)
+ app//org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+ app//org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+ app//org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+ app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+ app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+ app//org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+ app//org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+ app//org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+ app//org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+ app//org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+ app//javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+ app//org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+ app//javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+ app//org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+ app//org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+ app//org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+ app//org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+ app//org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+ app//org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+ app//org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+ app//org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+ app//org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+ app//org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+ app//org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+ app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+ app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+ app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.base@16.0.2/java.lang.Thread.run(Thread.java:831)]
+2023-05-29 22:42:34,039 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:42:35,829 - msg: test com.elk.userservice.controller.UserController@1be427b4
+2023-05-29 22:42:35,830 - msg: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150] with root cause
+java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.ensureObj(UnsafeFieldAccessorImpl.java:58)
+	at java.base/jdk.internal.reflect.UnsafeObjectFieldAccessorImpl.get(UnsafeObjectFieldAccessorImpl.java:36)
+	at java.base/java.lang.reflect.Field.get(Field.java:419)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.writeField(ReflectiveTypeAdapterFactory.java:138)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at com.google.gson.Gson.toJson(Gson.java:638)
+	at com.elk.userservice.aspect.UserServiceAspect.before(UserServiceAspect.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+	at org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150.getUser(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2023-05-29 22:42:35,842 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:42:35,850 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:42:35,851 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-29 22:42:35,856 - msg: HikariPool-1 - Shutdown completed.
+2023-05-29 22:45:58,261 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 17404 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:45:58,266 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:45:58,798 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:45:58,849 - msg: Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:45:59,381 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:45:59,390 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:45:59,390 - msg: Starting service [Tomcat]
+2023-05-29 22:45:59,390 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:45:59,493 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:45:59,494 - msg: Root WebApplicationContext: initialization completed in 1189 ms
+2023-05-29 22:45:59,658 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:45:59,701 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:45:59,842 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:45:59,946 - msg: HikariPool-1 - Starting...
+2023-05-29 22:46:00,082 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:46:00,099 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:46:00,656 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:46:00,666 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:46:00,970 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:46:01,279 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:46:01,303 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:46:01,317 - msg: Started UserserviceApplication in 3.523 seconds (JVM running for 4.302)
+2023-05-29 22:46:08,495 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:46:08,495 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:46:08,496 - msg: Completed initialization in 1 ms
+2023-05-29 22:46:33,498 - msg: test execution(UserResponse com.elk.userservice.controller.UserController.getUser(UserRequest))
+2023-05-29 22:47:12,827 - msg: Application shutdown requested.
+2023-05-29 22:47:12,844 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:47:12,844 - msg: Stopping service [Tomcat]
+2023-05-29 22:47:12,845 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:47:13,849 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:47:14,854 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:47:14,955 - msg: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-29 22:47:14,958 - msg: The web application [ROOT] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ app//com.elk.userservice.aspect.UserServiceAspect.before(Unknown Source)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+ java.base@16.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@16.0.2/java.lang.reflect.Method.invoke(Method.java:567)
+ app//org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+ app//org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+ app//org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+ app//org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+ app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ app//org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+ app//org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+ app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ app//org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+ app//org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+ app//com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$76c330f0.getUser(<generated>)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+ java.base@16.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@16.0.2/java.lang.reflect.Method.invoke(Method.java:567)
+ app//org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+ app//org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+ app//org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+ app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+ app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+ app//org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+ app//org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+ app//org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+ app//org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+ app//org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+ app//javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+ app//org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+ app//javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+ app//org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+ app//org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+ app//org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+ app//org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+ app//org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+ app//org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+ app//org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+ app//org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+ app//org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+ app//org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+ app//org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+ app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+ app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+ app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.base@16.0.2/java.lang.Thread.run(Thread.java:831)]
+2023-05-29 22:47:14,960 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:47:19,962 - msg: The executor associated with thread pool [http-nio-8085] has not fully shutdown. Some application threads may still be running.
+2023-05-29 22:47:19,963 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:47:19,970 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:47:19,972 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-29 22:47:19,979 - msg: HikariPool-1 - Shutdown completed.
+2023-05-29 22:47:23,152 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 12760 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:47:23,157 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:47:23,761 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:47:23,828 - msg: Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:47:24,414 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:47:24,422 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:47:24,422 - msg: Starting service [Tomcat]
+2023-05-29 22:47:24,423 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:47:24,526 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:47:24,526 - msg: Root WebApplicationContext: initialization completed in 1325 ms
+2023-05-29 22:47:24,709 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:47:24,758 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:47:24,902 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:47:24,995 - msg: HikariPool-1 - Starting...
+2023-05-29 22:47:25,127 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:47:25,142 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:47:25,733 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:47:25,743 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:47:26,077 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:47:26,447 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:47:26,469 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:47:26,479 - msg: Started UserserviceApplication in 3.797 seconds (JVM running for 4.605)
+2023-05-29 22:47:27,956 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:47:27,957 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:47:27,958 - msg: Completed initialization in 1 ms
+2023-05-29 22:47:38,691 - msg: test [Ljava.lang.Object;@54ee52db
+2023-05-29 22:48:00,695 - msg: Application shutdown requested.
+2023-05-29 22:48:00,712 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:48:00,712 - msg: Stopping service [Tomcat]
+2023-05-29 22:48:00,713 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:48:01,808 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:48:02,898 - msg: Waiting for [1] instance(s) to be deallocated for Servlet [dispatcherServlet]
+2023-05-29 22:48:03,007 - msg: Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-29 22:48:03,011 - msg: The web application [ROOT] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ app//com.elk.userservice.aspect.UserServiceAspect.before(Unknown Source)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+ java.base@16.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@16.0.2/java.lang.reflect.Method.invoke(Method.java:567)
+ app//org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+ app//org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+ app//org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+ app//org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+ app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ app//org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+ app//org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+ app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ app//org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+ app//org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+ app//com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$6bad95b7.getUser(<generated>)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@16.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+ java.base@16.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@16.0.2/java.lang.reflect.Method.invoke(Method.java:567)
+ app//org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+ app//org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+ app//org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+ app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+ app//org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+ app//org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+ app//org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+ app//org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+ app//org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+ app//org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+ app//javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+ app//org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+ app//javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+ app//org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ app//org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ app//org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ app//org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+ app//org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+ app//org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+ app//org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+ app//org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+ app//org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+ app//org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+ app//org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+ app//org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+ app//org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+ app//org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+ app//org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+ app//org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+ app//org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+ app//org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.base@16.0.2/java.lang.Thread.run(Thread.java:831)]
+2023-05-29 22:48:03,013 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:48:04,462 - msg: Application shutdown requested.
+2023-05-29 22:48:08,016 - msg: The executor associated with thread pool [http-nio-8085] has not fully shutdown. Some application threads may still be running.
+2023-05-29 22:48:08,017 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:48:08,019 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:48:08,021 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-29 22:48:08,027 - msg: HikariPool-1 - Shutdown completed.
+2023-05-29 22:48:15,229 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 1400 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:48:15,232 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:48:15,817 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:48:15,860 - msg: Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:48:16,400 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:48:16,408 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:48:16,409 - msg: Starting service [Tomcat]
+2023-05-29 22:48:16,409 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:48:16,512 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:48:16,512 - msg: Root WebApplicationContext: initialization completed in 1237 ms
+2023-05-29 22:48:16,701 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:48:16,752 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:48:16,914 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:48:17,007 - msg: HikariPool-1 - Starting...
+2023-05-29 22:48:17,140 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:48:17,155 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:48:17,687 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:48:17,696 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:48:18,013 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:48:18,331 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:48:18,359 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:48:18,368 - msg: Started UserserviceApplication in 3.587 seconds (JVM running for 4.382)
+2023-05-29 22:48:23,155 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:48:23,155 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:48:23,156 - msg: Completed initialization in 1 ms
+2023-05-29 22:48:25,669 - msg: test [Ljava.lang.Object;@47ba9f28
+2023-05-29 22:48:25,679 - msg: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to [Ljava.lang.Object;] with root cause
+java.lang.IllegalArgumentException: Can not set java.lang.String field com.elk.userservice.objects.UserRequest.sessionId to [Ljava.lang.Object;
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)
+	at java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.ensureObj(UnsafeFieldAccessorImpl.java:58)
+	at java.base/jdk.internal.reflect.UnsafeObjectFieldAccessorImpl.get(UnsafeObjectFieldAccessorImpl.java:36)
+	at java.base/java.lang.reflect.Field.get(Field.java:419)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.writeField(ReflectiveTypeAdapterFactory.java:138)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at com.google.gson.Gson.toJson(Gson.java:638)
+	at com.elk.userservice.aspect.UserServiceAspect.before(UserServiceAspect.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:617)
+	at org.springframework.aop.aspectj.AspectJMethodBeforeAdvice.before(AspectJMethodBeforeAdvice.java:44)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.elk.userservice.controller.UserController$$EnhancerBySpringCGLIB$$1a551150.getUser(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2023-05-29 22:48:54,271 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 27764 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:48:54,276 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:48:54,803 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:48:54,847 - msg: Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:48:55,443 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:48:55,455 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:48:55,456 - msg: Starting service [Tomcat]
+2023-05-29 22:48:55,456 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:48:55,569 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:48:55,569 - msg: Root WebApplicationContext: initialization completed in 1250 ms
+2023-05-29 22:48:55,746 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:48:55,789 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:48:55,935 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:48:56,038 - msg: HikariPool-1 - Starting...
+2023-05-29 22:48:56,179 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:48:56,195 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:48:56,736 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:48:56,748 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:48:57,075 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:48:57,394 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:48:57,417 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:48:57,427 - msg: Started UserserviceApplication in 3.612 seconds (JVM running for 4.413)
+2023-05-29 22:54:51,191 - msg: Application shutdown requested.
+2023-05-29 22:54:51,219 - msg: Pausing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:54:51,220 - msg: Stopping service [Tomcat]
+2023-05-29 22:54:51,226 - msg: Stopping ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:54:51,231 - msg: Destroying ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:54:51,235 - msg: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:54:51,238 - msg: HikariPool-1 - Shutdown initiated...
+2023-05-29 22:54:51,249 - msg: HikariPool-1 - Shutdown completed.
+2023-05-29 22:56:02,073 - msg: Starting UserserviceApplication using Java 16.0.2 on Pradeep-PC with PID 22192 (D:\Workspace\TestProject\userservice\userservice\target\classes started by LENOVO in D:\Workspace\TestProject\userservice\userservice)
+2023-05-29 22:56:02,079 - msg: No active profile set, falling back to 1 default profile: "default"
+2023-05-29 22:56:02,988 - msg: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 22:56:03,053 - msg: Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interfaces.
+2023-05-29 22:56:03,774 - msg: Tomcat initialized with port(s): 8085 (http)
+2023-05-29 22:56:03,786 - msg: Initializing ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:56:03,786 - msg: Starting service [Tomcat]
+2023-05-29 22:56:03,787 - msg: Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-05-29 22:56:03,949 - msg: Initializing Spring embedded WebApplicationContext
+2023-05-29 22:56:03,949 - msg: Root WebApplicationContext: initialization completed in 1781 ms
+2023-05-29 22:56:04,292 - msg: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 22:56:04,393 - msg: HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-29 22:56:04,718 - msg: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-29 22:56:04,900 - msg: HikariPool-1 - Starting...
+2023-05-29 22:56:05,165 - msg: HikariPool-1 - Start completed.
+2023-05-29 22:56:05,188 - msg: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-05-29 22:56:06,022 - msg: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 22:56:06,031 - msg: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 22:56:06,334 - msg: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 22:56:06,685 - msg: Starting ProtocolHandler ["http-nio-8085"]
+2023-05-29 22:56:06,709 - msg: Tomcat started on port(s): 8085 (http) with context path ''
+2023-05-29 22:56:06,718 - msg: Started UserserviceApplication in 5.398 seconds (JVM running for 7.084)
+2023-05-29 22:56:55,278 - msg: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 22:56:55,279 - msg: Initializing Servlet 'dispatcherServlet'
+2023-05-29 22:56:55,279 - msg: Completed initialization in 0 ms
+2023-05-29 22:56:55,393 - msg: Request received : {"sessionId":"ffeffs","id":5}
+2023-05-29 22:56:55,393 - msg: getUser():: UserId validation success
+2023-05-29 22:56:55,452 - msg: User available for userId : ?
